@@ -7,7 +7,6 @@ int solve(string rpn, string word);
 void checker(string rpn, string word, int answer_right = -1) {
     int answer = solve(rpn, word);
     if (answer != answer_right) {
-//        cout << -1;
         cout << "Wrong answer: " << answer << "Expected: " << answer_right;
         throw logic_error("wrong answer");
     }
@@ -39,8 +38,4 @@ void test() {
 
     checker("1a+b+c+*", "baca", 4);
     checker("1a+b+c+*", "baka", 2);
-
-
-
-
 }
