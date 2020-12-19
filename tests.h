@@ -2,10 +2,10 @@
 #include <cassert>
 
 
-int solve(std::string reg, std::string str);
+int wrap_solve(std::string reg, std::string str);
 
 void checker(std::string reg, std::string str, int answer_right = -1) {
-    int answer = solve(reg, str);
+    int answer = wrap_solve(reg, str);
     if (answer != answer_right) {
         std::cout << "Wrong answer: " << answer << "Expected: " << answer_right;
         throw std::logic_error("wrong answer");
